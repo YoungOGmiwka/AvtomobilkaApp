@@ -13,6 +13,17 @@
 		704560142A71B252004BB104 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704560132A71B252004BB104 /* Preview Assets.xcassets */; };
 		704560162A71B252004BB104 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560152A71B252004BB104 /* Persistence.swift */; };
 		704560192A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 704560172A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld */; };
+		704560212A72725F004BB104 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560202A72725F004BB104 /* HomeView.swift */; };
+		704560242A72837E004BB104 /* CarListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560232A72837E004BB104 /* CarListResponse.swift */; };
+		704560272A728836004BB104 /* CarEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560262A728836004BB104 /* CarEndpoint.swift */; };
+		7045602A2A728A44004BB104 /* CarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560292A728A44004BB104 /* CarListService.swift */; };
+		7045602D2A728B1B004BB104 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045602C2A728B1B004BB104 /* APIError.swift */; };
+		704560302A729704004BB104 /* CarResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045602F2A729704004BB104 /* CarResultState.swift */; };
+		704560332A72B2AD004BB104 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560322A72B2AD004BB104 /* CarViewModel.swift */; };
+		704560352A72B409004BB104 /* CarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560342A72B409004BB104 /* CarRowView.swift */; };
+		704560372A72BB0D004BB104 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560362A72BB0D004BB104 /* ErrorView.swift */; };
+		7045603A2A731969004BB104 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 704560392A731969004BB104 /* URLImage */; };
+		7045603D2A73EB53004BB104 /* DetailCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045603C2A73EB53004BB104 /* DetailCarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +34,17 @@
 		704560132A71B252004BB104 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		704560152A71B252004BB104 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		704560182A71B252004BB104 /* AvtomobilkaApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AvtomobilkaApp.xcdatamodel; sourceTree = "<group>"; };
+		704560202A72725F004BB104 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		704560232A72837E004BB104 /* CarListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListResponse.swift; sourceTree = "<group>"; };
+		704560262A728836004BB104 /* CarEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEndpoint.swift; sourceTree = "<group>"; };
+		704560292A728A44004BB104 /* CarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListService.swift; sourceTree = "<group>"; };
+		7045602C2A728B1B004BB104 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7045602F2A729704004BB104 /* CarResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarResultState.swift; sourceTree = "<group>"; };
+		704560322A72B2AD004BB104 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		704560342A72B409004BB104 /* CarRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRowView.swift; sourceTree = "<group>"; };
+		704560362A72BB0D004BB104 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		7045603B2A73C2E3004BB104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7045603C2A73EB53004BB104 /* DetailCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7045603A2A731969004BB104 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +78,15 @@
 		7045600B2A71B251004BB104 /* AvtomobilkaApp */ = {
 			isa = PBXGroup;
 			children = (
+				7045603B2A73C2E3004BB104 /* Info.plist */,
+				7045602E2A7296EB004BB104 /* States */,
+				7045602B2A728B0A004BB104 /* Error */,
+				704560282A728A25004BB104 /* Service */,
+				704560252A728810004BB104 /* Endpoint */,
+				704560312A72B1C3004BB104 /* ViewModel */,
+				704560222A728311004BB104 /* Model */,
+				7045601F2A727229004BB104 /* View */,
 				7045600C2A71B251004BB104 /* AvtomobilkaAppApp.swift */,
-				7045600E2A71B251004BB104 /* ContentView.swift */,
 				704560102A71B252004BB104 /* Assets.xcassets */,
 				704560152A71B252004BB104 /* Persistence.swift */,
 				704560172A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld */,
@@ -71,6 +101,66 @@
 				704560132A71B252004BB104 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7045601F2A727229004BB104 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				704560202A72725F004BB104 /* HomeView.swift */,
+				704560342A72B409004BB104 /* CarRowView.swift */,
+				7045603C2A73EB53004BB104 /* DetailCarView.swift */,
+				7045600E2A71B251004BB104 /* ContentView.swift */,
+				704560362A72BB0D004BB104 /* ErrorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		704560222A728311004BB104 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				704560232A72837E004BB104 /* CarListResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		704560252A728810004BB104 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				704560262A728836004BB104 /* CarEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		704560282A728A25004BB104 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				704560292A728A44004BB104 /* CarListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7045602B2A728B0A004BB104 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				7045602C2A728B1B004BB104 /* APIError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		7045602E2A7296EB004BB104 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				7045602F2A729704004BB104 /* CarResultState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		704560312A72B1C3004BB104 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				704560322A72B2AD004BB104 /* CarViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +179,9 @@
 			dependencies = (
 			);
 			name = AvtomobilkaApp;
+			packageProductDependencies = (
+				704560392A731969004BB104 /* URLImage */,
+			);
 			productName = AvtomobilkaApp;
 			productReference = 704560092A71B251004BB104 /* AvtomobilkaApp.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +210,9 @@
 				Base,
 			);
 			mainGroup = 704560002A71B251004BB104;
+			packageReferences = (
+				704560382A731969004BB104 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 7045600A2A71B251004BB104 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +239,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704560352A72B409004BB104 /* CarRowView.swift in Sources */,
+				704560272A728836004BB104 /* CarEndpoint.swift in Sources */,
+				7045603D2A73EB53004BB104 /* DetailCarView.swift in Sources */,
 				704560162A71B252004BB104 /* Persistence.swift in Sources */,
+				7045602A2A728A44004BB104 /* CarListService.swift in Sources */,
+				704560332A72B2AD004BB104 /* CarViewModel.swift in Sources */,
+				704560302A729704004BB104 /* CarResultState.swift in Sources */,
 				704560192A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld in Sources */,
 				7045600F2A71B251004BB104 /* ContentView.swift in Sources */,
+				704560242A72837E004BB104 /* CarListResponse.swift in Sources */,
+				704560212A72725F004BB104 /* HomeView.swift in Sources */,
 				7045600D2A71B251004BB104 /* AvtomobilkaAppApp.swift in Sources */,
+				704560372A72BB0D004BB104 /* ErrorView.swift in Sources */,
+				7045602D2A728B1B004BB104 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +383,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AvtomobilkaApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AvtomobilkaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +412,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AvtomobilkaApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AvtomobilkaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		704560382A731969004BB104 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		704560392A731969004BB104 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704560382A731969004BB104 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		704560172A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld */ = {
