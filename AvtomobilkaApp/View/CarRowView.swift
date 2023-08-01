@@ -13,7 +13,6 @@ struct CarRowView: View {
     let car: CarList
 
     var body: some View {
-        
         ZStack {
             VStack {
                 if let imgUrl = car.imageURL.replacingOccurrences(of: "\"", with: ""),

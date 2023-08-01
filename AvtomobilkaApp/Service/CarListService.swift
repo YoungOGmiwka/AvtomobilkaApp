@@ -36,10 +36,7 @@ struct CarListServiceImpl: CarService {
                 } else {
                     return Fail(error: APIError.errorCode(response.statusCode)).eraseToAnyPublisher()
                 }
-                
             }
             .eraseToAnyPublisher()
     }
-    
-    
 }

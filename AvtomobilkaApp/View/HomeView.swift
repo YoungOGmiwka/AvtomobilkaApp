@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var vm = CarsViewModel()
-    
+    @StateObject var carsViewModel = CarsViewModel()
+    @StateObject var detailCarsViewModel = DetailCarsViewModel()
+    @State private var selectedCarId: Int?
     @State private var path = NavigationPath()
 
     var body: some View {
@@ -18,13 +19,14 @@ struct HomeView: View {
         NavigationStack(path: $path) {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
-                    ForEach(vm.cars, id: \.id) { item in
+                    ForEach(carsViewModel.cars, id: \.id) { item in
                         NavigationLink {
-                            DetailCarView(path: $path)
+                            DetailCarView(detailCarsViewModel: detailCarsViewModel, path: $path, carName: item.name)
+                                .onAppear { detailCarsViewModel.fetchCarInfo(detailCars: item.id) }
+
                         } label: {
                             CarRowView(car: item)
                                 .foregroundColor(.black)
-
                         }
                     }
                 }
@@ -32,7 +34,7 @@ struct HomeView: View {
                 .padding(.horizontal)
 
             }
-            .onAppear(perform: vm.fetchCars)
+            .onAppear(perform: carsViewModel.fetchCars)
 
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -46,7 +48,6 @@ struct HomeView: View {
                                 .weight(.bold))
                     }
                 }
-
             }
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(Color("custom"), for: .navigationBar)
@@ -67,14 +68,3 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
-
-//List {
-//    ForEach(items) { item in
-//        NavigationLink {
-//            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-//        } label: {
-//            Text(item.timestamp!, formatter: itemFormatter)
-//        }
-//    }
-//    .onDelete(perform: deleteItems)
-//}

@@ -6,15 +6,6 @@
 //
 
 import Foundation
-//
-//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
-
-//typealias CarList = [CarListResponse]
-
-//// MARK: - CarListResponse
-//struct CarListResponse: Codable {
-//    let сars: [CarList]
-//}
 
 // MARK: - CarList
 struct CarList: Codable, Identifiable {
@@ -85,17 +76,6 @@ extension CarList {
                                    image500: "",
                                    image100: "")],
               engine: "2.0 TSI")
-        
-        
-//        .init(id: 49,
-//              brandName: "Volkswagen",
-//              modelName: "Tiguan",
-//              engineName: "TSI",
-//              year: 2018,
-//              name: "Volkswagen Tiguan TSI AT 2018 г.",
-//              imageURL: "",
-//              transmissionName: TransmissionName.at)
-
     }
 }
 

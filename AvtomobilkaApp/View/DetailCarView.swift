@@ -8,12 +8,30 @@
 import SwiftUI
 
 struct DetailCarView: View {
-    
+        
+    @ObservedObject var detailCarsViewModel: DetailCarsViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var path: NavigationPath
     
+    let carName: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false) {
+            DetailCarRow(detailCarsViewModel: detailCarsViewModel)
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Image(systemName: "arrow.backward.square")
+                    .onTapGesture {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(carName)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(Color("custom"), for: .navigationBar)
     }
 }
 
