@@ -8,47 +8,6 @@
 import Foundation
 import Combine
 
-//protocol ICarViewModel {
-//    func getCarList()
-//}
-//
-//class CarViewModelImpl: ObservableObject, ICarViewModel {
-//
-//    private let service: CarService
-//
-//    private(set) var сars = [CarList]()
-//
-//    private var cancellables = Set<AnyCancellable>()
-//
-//    @Published private(set) var state: CarResultState = .loading
-//
-//    init(service: CarService) {
-//        self.service = service
-//    }
-//
-//    func getCarList() {
-//
-//        self.state = .loading
-//
-//        let cancellable = service
-//            .request(from: .getCars)
-//            .sink { res in
-//                switch res {
-//                case .finished:
-//                    self.state = .success(content: self.сars)
-//                break
-//                case .failure(let error):
-//                    self.state = .failed(error: error)
-//                break
-//                }
-//            } receiveValue: { response in
-//                self.сars = response.сars
-//            }
-//
-//        self.cancellables.insert(cancellable)
-//    }
-//}
-
 class CarsViewModel: ObservableObject {
     
     @Published var cars: [CarList] = []
@@ -56,7 +15,7 @@ class CarsViewModel: ObservableObject {
     @Published var error: CarError?
     @Published private(set) var isRefreshing = false
     
-    private var bag = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
     
     func fetchCars() {
         
@@ -87,11 +46,10 @@ class CarsViewModel: ObservableObject {
                 } receiveValue: { [weak self] cars in
                     self?.cars = cars
                 }
-                .store(in: &bag)
+                .store(in: &cancellables)
         }
     }
 }
-
 
 extension CarsViewModel {
     enum CarError: LocalizedError {

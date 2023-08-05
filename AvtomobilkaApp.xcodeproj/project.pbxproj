@@ -15,10 +15,7 @@
 		704560192A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 704560172A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld */; };
 		704560212A72725F004BB104 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560202A72725F004BB104 /* HomeView.swift */; };
 		704560242A72837E004BB104 /* CarListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560232A72837E004BB104 /* CarListResponse.swift */; };
-		704560272A728836004BB104 /* CarEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560262A728836004BB104 /* CarEndpoint.swift */; };
-		7045602A2A728A44004BB104 /* CarListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560292A728A44004BB104 /* CarListService.swift */; };
 		7045602D2A728B1B004BB104 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045602C2A728B1B004BB104 /* APIError.swift */; };
-		704560302A729704004BB104 /* CarResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045602F2A729704004BB104 /* CarResultState.swift */; };
 		704560332A72B2AD004BB104 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560322A72B2AD004BB104 /* CarViewModel.swift */; };
 		704560352A72B409004BB104 /* CarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560342A72B409004BB104 /* CarRowView.swift */; };
 		704560372A72BB0D004BB104 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560362A72BB0D004BB104 /* ErrorView.swift */; };
@@ -27,8 +24,11 @@
 		7045603F2A76E01E004BB104 /* DetailCarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045603E2A76E01E004BB104 /* DetailCarResponse.swift */; };
 		704560412A76E38F004BB104 /* DetailCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560402A76E38F004BB104 /* DetailCarViewModel.swift */; };
 		704560432A77C1EA004BB104 /* DetailCarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560422A77C1EA004BB104 /* DetailCarRow.swift */; };
-		704560452A781280004BB104 /* DetailCarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560442A781280004BB104 /* DetailCarResult.swift */; };
-		704560472A781EBC004BB104 /* DetailCarEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560462A781EBC004BB104 /* DetailCarEndpoint.swift */; };
+		704560492A7A5C51004BB104 /* CarPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560482A7A5C51004BB104 /* CarPostResponse.swift */; };
+		7045604D2A7AB488004BB104 /* PostCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045604C2A7AB488004BB104 /* PostCarView.swift */; };
+		7045606E2A7B0922004BB104 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045606D2A7B0922004BB104 /* DateFormatter.swift */; };
+		704560902A7DC738004BB104 /* DetailInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045608F2A7DC738004BB104 /* DetailInfoEndpoint.swift */; };
+		704560922A7DC9D4004BB104 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704560912A7DC9D4004BB104 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +41,7 @@
 		704560182A71B252004BB104 /* AvtomobilkaApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AvtomobilkaApp.xcdatamodel; sourceTree = "<group>"; };
 		704560202A72725F004BB104 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		704560232A72837E004BB104 /* CarListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListResponse.swift; sourceTree = "<group>"; };
-		704560262A728836004BB104 /* CarEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEndpoint.swift; sourceTree = "<group>"; };
-		704560292A728A44004BB104 /* CarListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListService.swift; sourceTree = "<group>"; };
 		7045602C2A728B1B004BB104 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		7045602F2A729704004BB104 /* CarResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarResultState.swift; sourceTree = "<group>"; };
 		704560322A72B2AD004BB104 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		704560342A72B409004BB104 /* CarRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRowView.swift; sourceTree = "<group>"; };
 		704560362A72BB0D004BB104 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -53,8 +50,11 @@
 		7045603E2A76E01E004BB104 /* DetailCarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarResponse.swift; sourceTree = "<group>"; };
 		704560402A76E38F004BB104 /* DetailCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarViewModel.swift; sourceTree = "<group>"; };
 		704560422A77C1EA004BB104 /* DetailCarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarRow.swift; sourceTree = "<group>"; };
-		704560442A781280004BB104 /* DetailCarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarResult.swift; sourceTree = "<group>"; };
-		704560462A781EBC004BB104 /* DetailCarEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCarEndpoint.swift; sourceTree = "<group>"; };
+		704560482A7A5C51004BB104 /* CarPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPostResponse.swift; sourceTree = "<group>"; };
+		7045604C2A7AB488004BB104 /* PostCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCarView.swift; sourceTree = "<group>"; };
+		7045606D2A7B0922004BB104 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		7045608F2A7DC738004BB104 /* DetailInfoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoEndpoint.swift; sourceTree = "<group>"; };
+		704560912A7DC9D4004BB104 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				7045603B2A73C2E3004BB104 /* Info.plist */,
-				7045602E2A7296EB004BB104 /* States */,
 				7045602B2A728B0A004BB104 /* Error */,
 				704560282A728A25004BB104 /* Service */,
 				704560252A728810004BB104 /* Endpoint */,
@@ -117,8 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				704560202A72725F004BB104 /* HomeView.swift */,
-				704560422A77C1EA004BB104 /* DetailCarRow.swift */,
 				704560342A72B409004BB104 /* CarRowView.swift */,
+				704560422A77C1EA004BB104 /* DetailCarRow.swift */,
+				7045604C2A7AB488004BB104 /* PostCarView.swift */,
 				7045603C2A73EB53004BB104 /* DetailCarView.swift */,
 				7045600E2A71B251004BB104 /* ContentView.swift */,
 				704560362A72BB0D004BB104 /* ErrorView.swift */,
@@ -131,6 +131,7 @@
 			children = (
 				704560232A72837E004BB104 /* CarListResponse.swift */,
 				7045603E2A76E01E004BB104 /* DetailCarResponse.swift */,
+				704560482A7A5C51004BB104 /* CarPostResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,8 +139,7 @@
 		704560252A728810004BB104 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
-				704560262A728836004BB104 /* CarEndpoint.swift */,
-				704560462A781EBC004BB104 /* DetailCarEndpoint.swift */,
+				7045608F2A7DC738004BB104 /* DetailInfoEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 		704560282A728A25004BB104 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				704560292A728A44004BB104 /* CarListService.swift */,
+				7045606D2A7B0922004BB104 /* DateFormatter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -160,20 +160,12 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		7045602E2A7296EB004BB104 /* States */ = {
-			isa = PBXGroup;
-			children = (
-				7045602F2A729704004BB104 /* CarResultState.swift */,
-				704560442A781280004BB104 /* DetailCarResult.swift */,
-			);
-			path = States;
-			sourceTree = "<group>";
-		};
 		704560312A72B1C3004BB104 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				704560322A72B2AD004BB104 /* CarViewModel.swift */,
 				704560402A76E38F004BB104 /* DetailCarViewModel.swift */,
+				704560912A7DC9D4004BB104 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -255,14 +247,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				704560352A72B409004BB104 /* CarRowView.swift in Sources */,
-				704560272A728836004BB104 /* CarEndpoint.swift in Sources */,
 				7045603D2A73EB53004BB104 /* DetailCarView.swift in Sources */,
+				704560492A7A5C51004BB104 /* CarPostResponse.swift in Sources */,
+				7045604D2A7AB488004BB104 /* PostCarView.swift in Sources */,
 				704560162A71B252004BB104 /* Persistence.swift in Sources */,
-				7045602A2A728A44004BB104 /* CarListService.swift in Sources */,
+				7045606E2A7B0922004BB104 /* DateFormatter.swift in Sources */,
+				704560902A7DC738004BB104 /* DetailInfoEndpoint.swift in Sources */,
 				7045603F2A76E01E004BB104 /* DetailCarResponse.swift in Sources */,
-				704560472A781EBC004BB104 /* DetailCarEndpoint.swift in Sources */,
 				704560332A72B2AD004BB104 /* CarViewModel.swift in Sources */,
-				704560302A729704004BB104 /* CarResultState.swift in Sources */,
+				704560922A7DC9D4004BB104 /* PostViewModel.swift in Sources */,
 				704560412A76E38F004BB104 /* DetailCarViewModel.swift in Sources */,
 				704560192A71B252004BB104 /* AvtomobilkaApp.xcdatamodeld in Sources */,
 				7045600F2A71B251004BB104 /* ContentView.swift in Sources */,
@@ -271,7 +264,6 @@
 				7045600D2A71B251004BB104 /* AvtomobilkaAppApp.swift in Sources */,
 				704560372A72BB0D004BB104 /* ErrorView.swift in Sources */,
 				704560432A77C1EA004BB104 /* DetailCarRow.swift in Sources */,
-				704560452A781280004BB104 /* DetailCarResult.swift in Sources */,
 				7045602D2A728B1B004BB104 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

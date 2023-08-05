@@ -35,9 +35,7 @@ struct CarRowView: View {
                 }
                 .frame(height: 40)
                 .padding(.bottom, 7)
-
             }
-
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             .shadow(color: Color.black.opacity(0.1), radius: 20)

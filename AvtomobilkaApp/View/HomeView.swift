@@ -11,19 +11,20 @@ struct HomeView: View {
     
     @StateObject var carsViewModel = CarsViewModel()
     @StateObject var detailCarsViewModel = DetailCarsViewModel()
-    @State private var selectedCarId: Int?
+    @StateObject var postCarViewModel = PostViewModel()
     @State private var path = NavigationPath()
 
     var body: some View {
-        
         NavigationStack(path: $path) {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
                     ForEach(carsViewModel.cars, id: \.id) { item in
                         NavigationLink {
-                            DetailCarView(detailCarsViewModel: detailCarsViewModel, path: $path, carName: item.name)
-                                .onAppear { detailCarsViewModel.fetchCarInfo(detailCars: item.id) }
-
+                            DetailCarView(detailCarsViewModel: detailCarsViewModel, postCarViewModel: postCarViewModel, path: $path, carName: item.name)
+                                .onAppear { detailCarsViewModel.fetchDetailCarInfo(carID: item.id)
+                                    postCarViewModel.fetchPostInfo(carID: item.id)
+                                }
+                            
                         } label: {
                             CarRowView(car: item)
                                 .foregroundColor(.black)
@@ -32,10 +33,8 @@ struct HomeView: View {
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal)
-
             }
             .onAppear(perform: carsViewModel.fetchCars)
-
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
@@ -54,14 +53,6 @@ struct HomeView: View {
         }
     }
 }
-
-//private let itemFormatter: DateFormatter = {
-//    let formatter = DateFormatter()
-//    formatter.dateStyle = .short
-////    formatter.timeStyle = .medium
-//    return formatter
-//}()
-        
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

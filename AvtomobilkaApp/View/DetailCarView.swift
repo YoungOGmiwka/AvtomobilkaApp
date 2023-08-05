@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailCarView: View {
         
     @ObservedObject var detailCarsViewModel: DetailCarsViewModel
+    @ObservedObject var postCarViewModel: PostViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var path: NavigationPath
     
@@ -18,6 +19,20 @@ struct DetailCarView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             DetailCarRow(detailCarsViewModel: detailCarsViewModel)
+            LazyVStack {
+                if let carPosts = postCarViewModel.carPost {
+                    ForEach(carPosts) { item in
+                        PostCarView(avatarImage: item.author.avatar.url,
+                                    userName: item.author.username,
+                                    postImage: item.postImage ?? "",
+                                    datePost: item.correctDate ?? item.createdAt,
+                                    postText: item.text,
+                                    likeCounter: item.likeCount,
+                                    commentCounter: item.commentCount)
+                    }
+                }
+            }
+            .padding(.top)
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
